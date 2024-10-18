@@ -1,0 +1,85 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.venv
+env/
+venv/
+ENV/
+ENV.bak/
+*.env
+*.env.*
+env.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django specific
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+/dev.db
+*.sqlite3-journal
+media
+staticfiles/
+static/
+*.local_settings.py
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+*.bak
+*.swp
+*.swo
+
+# VSCode
+.vscode/
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Pytest
+.pytest_cache/
+testdb.sqlite3
+
+# Migrations
+*/migrations/*
+
+# If you're using a PostgreSQL/PostGIS DB
+*.pgsql
+*.pgdata
+
+# Virtual environment
+env/
+venv/
+
+# Ignore IDE/editor-specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore static files build output
+/static/
+staticfiles/
+
+# Ignore media files
+/media/
+
+# Ignore local settings and secret keys
+secrets.json
+config.json
