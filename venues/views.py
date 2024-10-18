@@ -1,8 +1,7 @@
-from django.shortcuts import render
-from rest_framework import generics
-from .models import VenuesForHire
-from .serializers import SydneyVenueSerializer
+from rest_framework import viewsets
+from .models import Venue
+from .serializers import VenueSerializer
 
-class NSWSchoolList(generics.ListCreateAPIView):
-    queryset = VenuesForHire.objects.all()
-    serializer_class = SydneyVenueSerializer
+class VenueViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Venue.objects.all()
+    serializer_class = VenueSerializer

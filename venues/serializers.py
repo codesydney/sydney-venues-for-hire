@@ -1,15 +1,7 @@
 from rest_framework import serializers
-from .models import VenuesForHire
+from .models import Venue
 
-class SydneyVenueSerializer(serializers.ModelSerializer):
+class VenueSerializer(serializers.ModelSerializer):
     class Meta:
-        model = VenuesForHire
-        fields = '__all__'
-
-    def to_representation(self, instance):
-        representation = super().to_representation(instance)
-        if instance.createdate is None:
-            representation['createdate'] = None  # Handle null date gracefully
-        if instance.modifieddate is None:
-            representation['modifieddate'] = None  # Handle null date gracefully
-        return representation
+        model = Venue
+        fields = '__all__'  # Use '__all__' to serialize all fields
