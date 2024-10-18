@@ -1,10 +1,6 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import VenueViewSet
-
-router = DefaultRouter()
-router.register(r'venues', VenueViewSet)
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', views.VenuesPlaceList.as_view(), name='place-list'),
 ]

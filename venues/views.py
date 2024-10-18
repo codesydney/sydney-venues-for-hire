@@ -1,7 +1,7 @@
-from rest_framework import viewsets
+from rest_framework import generics
 from .models import Venue
 from .serializers import VenueSerializer
 
-class VenueViewSet(viewsets.ReadOnlyModelViewSet):
+class VenuesPlaceList(generics.ListCreateAPIView):
     queryset = Venue.objects.all()
     serializer_class = VenueSerializer
